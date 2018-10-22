@@ -24,7 +24,7 @@ class Fellow:
     # Get the current status of the fellow. 
     def get_status(self):
         print(self.status)
-    # Sets the status of the student to "graduate" and caps get_year at a certain value
+    # Sets the status of the student to "graduate" and caps get_year_graduate_school at a certain value
     def set_graduate(self, year):
         if self.start_year_g <= 2018 - year:
             print("graduate")
@@ -41,7 +41,7 @@ class Fellow:
         else:
             return False
 
-# Input our data for Fellow class:
+# Input our sample data (only 3 fellows) for Fellow class:
 p1 = Fellow("Alex Gil", "English", 2010, 2011, "graduate")
 p2 = Fellow("Brooke Lestock", "English", 2010, 2011, "graduate")
 p3 = Fellow("Lindsay O’Connor", "English", 2010, 2011, "graduate")
