@@ -1,31 +1,61 @@
 class Fellow:
-    # Constructor. Name (in "firstname  lastname" format) and department are self-explanatory. Start_year is the year that the student started grad school.
-    def __init__(self, name, department, start_year):
+    # Constructor. Name (in "firstname  lastname" format) and department are self-explanatory. 
+    # start_year_g is the year that the student started grad school;
+    # start_year_f is the year that the student started Praxis Fellowship;
+    # status is the student current status: "student" or "graduate".
+    def __init__(self, name, department, start_year_g, start_year_f, status):
+        self.name = name
+        self.department = department
+        self.start_year_g = start_year_g
+        self.start_year_f = start_year_f
+        self.status = status
         pass
     # Get the student's name
     def get_name(self):
-        return("Brandon Walsh")
+        print(self.name)
     def get_department(self):
-        return("English")
-    # Returns how many years the fellow has spent in their program (1 = "first year", etc) using the current, actual date. If the fellow has graduated, return how many years it took to graduate.
-    def get_year(self):
-        return(6)
-    # Get the current status of the fellow. Fellows all start as "student", but can eventually become a "graduate". Let's not mention the third possibility.
+        print(self.department)
+    # get the student's start year of the graudate school:
+    def get_year_graduate_school(self):
+        print(self.start_year_g)
+    # get the student's start year of the praxis fellowship:
+    def get_year_fellowship(self):
+        print(self.start_year_f)
+    # Get the current status of the fellow. 
     def get_status(self):
-        return("student")
+        print(self.status)
     # Sets the status of the student to "graduate" and caps get_year at a certain value
     def set_graduate(self, year):
+        if self.start_year_g <= 2018 - year:
+            print("graduate")
+        else:
+            print("current student")
         pass
-    # Invent a secret algorithm to based on some combination of the fellow's data (number of vowels in name, heiarchy of departments, etc) to generate a secret rating from 0-10 for a fellow. Be creative.
-    def get_rating(self):
-        return(10)
     # Return a string representing all the data for a student in as a single row of a CSV file.
     def printout(self):
-        return("Brandon Walsh, English, etc, etc, etc")
+        print(self.name + ", " + self.department + ", " + "start year of graduate school in " + str(self.start_year_g) + ", start year of Praxis fellowship in " + str(self.start_year_f) + ", " + self.status)
     # Compare two fellows. If they have all the same data, return true.
     def equals(self,f):
-        return(False)
-    
+        if self.name == f.name and self.department == f.department and self.start_year_g == f.start_year_g and self.start_year_f==f.start_year_f and self.status==f.status:
+            return True
+        else:
+            return False
+
+# Input our data for Fellow class:
+p1 = Fellow("Alex Gil", "English", 2010, 2011, "graduate")
+p2 = Fellow("Brooke Lestock", "English", 2010, 2011, "graduate")
+p3 = Fellow("Lindsay O’Connor", "English", 2010, 2011, "graduate")
+
+# Test some functions above:
+p1.get_name()
+p1.get_department()
+p1.get_year_graduate_school()
+p1.get_year_fellowship()
+p1.get_status()
+p1.set_graduate(5)
+p1.printout()
+p1.equals(p2)
+
     
 class Fellowship:
     # Name is the name of the fellowship
