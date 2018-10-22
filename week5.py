@@ -29,13 +29,26 @@ class Fellow:
     
 class Fellowship:
     # Name is the name of the fellowship
+    self.fellows = {}
+
     def __init__(self, name):
+        self.name = name
         pass
-    # Audit the program to check that there's been a cohort of 6 students every year and that no person appears multiple times in each cohort. Return True if the fellowship passes, False if it fails.
+    # Audit the program to check that there's been a cohort of 6 students every year
+    # and that no person appears multiple times in each cohort.
+    # Return True if the fellowship passes, False if it fails.
     def audit(self):
-        return(True)
+        if len() == 6
+            return (True)
+        else
+            return(False)
     #Add fellow f to the fellowship in the cohort for year year. 
     def add_fellow(self, f, year):
+        if year in self.fellows:
+            self.fellows[year].append(f)
+        else:
+            self.fellows[year] = []
+            self.fellows[year].append(f)
         pass
     # Return all the fellows for a particular year's cohort in a list. Figure out what to return if the cohort doesn't exist.
     def get_cohort(self, year):
@@ -58,10 +71,3 @@ class Fellowship:
     # Write the data for all the students to a CSV file using the filename parameter
     def write_to_file(self,filename):
         pass
-
-praxis = Fellowship("Praxis")
-praxis.add_fellow(Fellow("Brandon Walsh","English",2011), 2012)
-print(praxis.get_cohort(2012))
-print(praxis.get_cohort_rating(2012))
-print(praxis.audit())
-# Add more code to test
