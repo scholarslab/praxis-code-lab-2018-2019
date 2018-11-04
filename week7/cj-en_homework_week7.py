@@ -27,9 +27,9 @@ class Artist:
         }
         return self_to_dict
 
-Vincent = Artist("Vincent van Gogh","nineteenth century","painting")
-Pablo = Artist("Pablo Picasso", "long nineteenth century","painter and sculptor")
-Andy = Artist("Andy Warhol","twentieth century", "multimedia")
+Vincent = Artist("Vincent van","Gogh","nineteenth century","painting")
+Pablo = Artist("Pablo","Picasso", "long nineteenth century","painter and sculptor")
+Andy = Artist("Andy","Warhol","twentieth century", "multimedia")
 centuries = ["long 19th century","even longer 18th century","Medieval Times","1999"]
 expertises = ["painting","sculpture","multimedia","new media"]
 
