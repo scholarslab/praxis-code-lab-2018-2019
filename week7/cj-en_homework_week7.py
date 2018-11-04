@@ -45,11 +45,10 @@ Pablo.check_expertise()
 
 Andy.return_info()
 
+# try a "manual" way of writing a .txt file:
 Vincent_info = Vincent.return_info()
 Pablo_info = Pablo.return_info()
 Andy_info = Andy.return_info()
-
-# try a "manual" way of writing a .txt file:
 input_file = open("artists_info.txt", "w")
 input_file.write(str(Vincent_info))
 input_file.write(str(Pablo_info))
