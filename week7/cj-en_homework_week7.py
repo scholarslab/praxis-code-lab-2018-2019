@@ -54,6 +54,7 @@ input_file = open("artists_info.txt", "w")
 input_file.write(str(Vincent_info))
 input_file.write(str(Pablo_info))
 input_file.write(str(Andy_info))
+input_file.close()
 
 # An alternative way (for loop) of writing a .txt file:
 input_file = open("artists_info.txt", "w")
