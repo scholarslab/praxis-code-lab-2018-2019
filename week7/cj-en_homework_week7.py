@@ -1,12 +1,12 @@
 class Artist:
-    def __init__(self, name, century, expertise):
-        self.name = name
+    def __init__(self, first_name, last_name, century, expertise):
+        self.first_name = first_name
+        self.last_name = last_name
         self.century = century
         self.expertise = expertise
 
-    def get_name(self):
-        return self.name
-        print(self.name)
+    def get_full_name(self):
+        return self.first_name + ' ' + self.last_name
 
     #check if century exists and if not add it to the list of centuries
     def check_century(self):
@@ -23,7 +23,7 @@ class Artist:
 
     def return_info(self):
         self_to_dict = {
-            "name" : self.name , "century" : self.century , "expertise" : self.expertise
+            "name" : self.first_name + ' ' + self.last_name, "century" : self.century , "expertise" : self.expertise
         }
         return self_to_dict
 
@@ -33,9 +33,9 @@ Andy = Artist("Andy Warhol","twentieth century", "multimedia")
 centuries = ["long 19th century","even longer 18th century","Medieval Times","1999"]
 expertises = ["painting","sculpture","multimedia","new media"]
 
-Vincent.get_name()  
-Pablo.get_name()
-Andy.get_name()
+Vincent.get_full_name()  
+Pablo.get_full_name()
+Andy.get_full_name()
 
 Vincent.check_century()
 Pablo.check_century()
@@ -53,3 +53,10 @@ input_file = open("artists_info.txt", "w")
 input_file.write(str(Vincent_info))
 input_file.write(str(Pablo_info))
 input_file.write(str(Andy_info))
+
+# Alternative way of writing a .txt file:
+input_file = open("artists_info.txt", "w")
+for artist in [Vincent, Pablo, Andy]:
+    output = str(artist.return_info()) + '\n'
+    input_file.write(output)
+input_file.close()
