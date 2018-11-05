@@ -8,8 +8,9 @@ class historical_figures:
         return self.first_name +' '+self.last_name
     def set_century(self, century):
         centuries = ['long 19th century','even longer 18th century', 'Medieval Times', '1999']
+        print(century)
         if century in centuries:
-            self.century = self.century + century
+            self.century.append(century)
         else:
             pass
     def add_expertises(self, expertises):
@@ -24,7 +25,7 @@ class historical_figures:
         return self_to_dict
 
 hildie = historical_figures("Hildegard","Von Bingen")
-hildie.set_century(['Medieval Times'])
+hildie.set_century('Medieval Times')
 hildie.add_expertises(['Jesus','music','science','languages'])
 print(hildie.get_info())
 #Use your class to create three historical figures.
