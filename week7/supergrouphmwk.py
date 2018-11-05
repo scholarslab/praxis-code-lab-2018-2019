@@ -7,6 +7,5 @@
 #Have a method that makes sure any expertise added to expertises doesn't already exist in expertises.
 #Have a method to return the person's class information to a dictionary (hint checkout the classes resources for help!)
 #Use your class to create three historical figures.
-#Use that class three times to create three historical figures.
-#Print out all three figures information when you run the script.
-#Write the historical figures information to a text file using the python "io" library.
+#Print out all three figures' information when you run the script.
+#Write the historical figures' information to a text file using the python "io" library.
