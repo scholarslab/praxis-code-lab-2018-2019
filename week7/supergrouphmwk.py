@@ -38,6 +38,8 @@ marx.set_century('long 19th century')
 marx.add_expertises(['economics','persuasion'])
 print(marx.get_info())
 
-
-
-#Write the historical figures' information to a text file using the python "io" library.
+f = open('historical_figures_results.txt','w')
+with open('historical_figures_results.txt','w') as file:
+    file.write(str(hildie.get_info()))
+    file.write(str(jane.get_info()))
+    file.write(str(marx.get_info()))
