@@ -23,11 +23,21 @@ class historical_figures:
         }
         return self_to_dict
 
-hildie = historical_figures("Hildegard","Von Bingen")
+hildie = historical_figures('Hildegard','Von Bingen')
 hildie.set_century('Medieval Times')
 hildie.add_expertises(['Jesus','music','science','languages'])
 print(hildie.get_info())
 
+jane = historical_figures('Jane','Austen')
+jane.set_century('even longer 18th century')
+jane.add_expertises(['writing','gender','sarcasm'])
+print(jane.get_info())
 
-#Print out all three figures' information when you run the script.
+marx = historical_figures('Karl','Marx')
+marx.set_century('long 19th century')
+marx.add_expertises(['economics','persuasion'])
+print(marx.get_info())
+
+
+
 #Write the historical figures' information to a text file using the python "io" library.
