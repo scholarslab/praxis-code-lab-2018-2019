@@ -29,7 +29,6 @@ class Historicalfigures:
         import json
         json_string = {"first_name": self.first_name, 
                        "last_name": self.last_name,
-                       "full_name": self.get_full_name(),
                        "century":self.century,
                        "expertises":self.expertises}
         with open(filename, "w") as write_file:
@@ -42,15 +41,14 @@ class Historicalfigures:
             jt = json.load(read_file)
             self.first_name = jt["first_name"]
             self.last_name = jt["last_name"]
-            self.century = jt["century"]
-            self.expertises = jt["expertises"]
+            [self.set_century(cen) for cen in jt["century"]]
+            [self.add_expertises([exp]) for exp in jt["expertises"]]
 
 
 jane = Historicalfigures('Jane','Austen')
 jane.set_century('even longer 18th century')
 jane.add_expertises(['writing','gender','sarcasm'])
 jane.serialize("jane_austen.json")
-jane.deserialize("jane_austen.json")
 jane_from_disk = Historicalfigures('','')
 jane_from_disk.deserialize("jane_austen.json")
 jane_from_disk.get_full_name()
