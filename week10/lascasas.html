@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Las Casas Italics</title>
+<meta name="description" content="Our epic Las Casas database plan.">
+<style>
+body {background-color: black;}
+h1   {color:whitesmoke;font-family: 'Courier New', serif}
+a    {color:whitesmoke;font-family: 'Courier New', serif; font-weight: bold;}
+p    {color:whitesmoke;font-family:'Courier New', serif; font-weight: bold;}
+li   {color:whitesmoke;font-family:'Courier New', serif; font-weight: bold;}
+</style>
+<h1 align="center">Our Epic Las Casas Database Plan<br/>by Catherine, Mathilda, & Chris</h1>
+</head>
+<body>
+<p>For our <a href="https://github.com/scholarslab/CodeLab/tree/master/Week10">homework</a> this week, Catherine decided to commandeer the opportunity to force her fellow fellows to start working on her digital edition of Bartolomé de las Casas' 1552 treatises.</p>
+
+<p align="center"><img src="https://media.giphy.com/media/3orifhuk3kkuVCl2AE/giphy.gif"></p>
+
+<p>The goal was to get <i>Brevísima relación de la destrucción de las Indias</i>, or rather the public-domain 1689 <a href="https://www.gutenberg.org/cache/epub/20321/pg20321-images.html">English translation</a> of it (about which Catherine has a soapbox but we can talk about that on our own time), from Project Gutenberg in order to extract all the proper nouns from it, i.e. toponyms and names. English-language texts from this time period happen to italicize proper nouns so we thought we'd pull the italicized snippets and de-dupe the list. That list of toponyms and names could then serve as a basis for a set of encyclopedia entries from which the digital edition could draw (i.e. click a person's name in the text, go to their page to learn more).</p>
+
+<p>Our (theoretical) workflow looked like this:</p>
+<ol>
+    <li>Scrape Project Gutenberg for the <a href="https://www.gutenberg.org/cache/epub/20321/pg20321-images.html">HTML version</a> of the text, 'cause we need those italic tags.</li>
+    <li>Use Beautiful Soup to get all the italic tags.</li>
+    <li>De-dupe the list, using maybe the <a href="https://pypi.org/project/dedupe/">dedupe</a> library.</li>
+    <li>Would be cool if we made lil dictionaries of toponyms vs. names but like who has time.</li>
+    <li>Save results to CSV.</li>
+    <li>Write up in HTML. Push to Github. Party.</li>
+</ol>
+
+<p>Our actual workflow looked like <a href="https://github.com/scholarslab/praxis-code-lab-2018-2019/blob/master/week10/lascasas.py">this code</a>.</p>
+
+</body>
+</html>
