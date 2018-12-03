@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import csv
 
 result = requests.get('https://www.gutenberg.org/cache/epub/20321/pg20321.html')
 lascasas_text = result.content
