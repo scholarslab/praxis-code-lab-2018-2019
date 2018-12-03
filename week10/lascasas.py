@@ -15,7 +15,6 @@ allitalics = soup.find_all("i")
 #write results to csv file
 with open('lascasasitalics.csv', 'w', newline='') as myfile:
      wr = csv.writer(myfile,delimiter=' ')
-     #should we add quoting=csv.QUOTE_ALL?
      for italic in allitalics:
         wr.writerow(italic)
 
